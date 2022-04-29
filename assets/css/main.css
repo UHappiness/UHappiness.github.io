@@ -3334,6 +3334,16 @@ input, select, textarea {
 				#nav + #main {
 					padding-top: 1;
 				}
+			
+			@media screen and (max-width: 600px) {
+					
+					#nav  {
+					  position: relative;
+					  top: 9em;
+					  left: 2em;
+					  transform: none;
+					}
+				}
 
 		
 
