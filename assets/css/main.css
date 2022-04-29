@@ -3309,7 +3309,7 @@ input, select, textarea {
 					}
 
 					#nav ul li a.active {
-						background-color: #ffffff;
+						background-color: #ffea8e;
 						box-shadow: none;
 					}
 
@@ -3329,6 +3329,16 @@ input, select, textarea {
 
 				#nav.alt ul li a {
 					font-size: 0.9em;
+				}
+
+		@media screen and (max-width: 736px) {
+
+			#nav {
+				display: block;
+			}
+
+				#nav + #main {
+					padding-top: 1;
 				}
 
 		
