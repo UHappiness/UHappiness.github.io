@@ -1,6 +1,7 @@
 @import url(fontawesome-all.min.css);
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
 
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -3075,6 +3076,107 @@ input, select, textarea {
 		border-color: rgba(255, 255, 255, 0.35);
 	}
 
+	/* picture */
+
+	.picture {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		margin: 0 0 2em 0;
+	}
+
+		.picture .content {
+			-moz-flex: 1;
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+		}
+
+			.picture .content > :last-child {
+				margin-bottom: 0;
+			}
+
+			.picture .content header.major {
+				margin: 0 0 2em 0;
+			}
+
+		.picture .image {
+			display: inline-block;
+			margin-left: 4em;
+			padding: 0.65em;
+			border-radius: 100%;
+			border: solid 1px;
+		}
+
+			.picture .image img {
+				display: block;
+				border-radius: 1em;
+				width: 16em;
+			}
+
+		@media screen and (max-width: 980px) {
+
+			.picture {
+				-moz-flex-direction: column-reverse;
+				-webkit-flex-direction: column-reverse;
+				-ms-flex-direction: column-reverse;
+				flex-direction: column-reverse;
+				text-align: center;
+			}
+
+				.picture .content {
+					-moz-flex: 0 1 auto;
+					-webkit-flex: 0 1 auto;
+					-ms-flex: 0 1 auto;
+					flex: 0 1 auto;
+					width: 100%;
+				}
+
+					.picture .content header.major h2:after {
+						margin-left: auto;
+						margin-right: auto;
+					}
+
+					.picture .content .actions {
+						-moz-justify-content: center;
+						-webkit-justify-content: center;
+						-ms-justify-content: center;
+						justify-content: center;
+						width: calc(100% + 1em);
+					}
+
+				.picture .image {
+					-moz-flex: 0 1 auto;
+					-webkit-flex: 0 1 auto;
+					-ms-flex: 0 1 auto;
+					flex: 0 1 auto;
+					margin-left: 0;
+					margin-bottom: 2em;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.picture .image {
+				padding: 0.35em;
+			}
+
+				.picture .image img {
+					width: 100%;
+				}
+
+		}
+
+	.picture .image {
+		border-color: rgba(255, 255, 255, 0.35);
+	}
+
 /* Header */
 
 	#header {
@@ -3303,7 +3405,7 @@ input, select, textarea {
 					}
 
 					#nav ul li a.active {
-						background-color: #ffea8e;
+						background-color: #ffe8ae;
 						box-shadow: none;
 					}
 
@@ -3325,17 +3427,18 @@ input, select, textarea {
 					font-size: 0.9em;
 				}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 480px) {
 
 			#nav {
-				display: block;
+				display: inline-block;
+				
 			}
 
 				#nav + #main {
 					padding-top: 1;
 				}
-			
-			@media screen and (max-width: 600px) {
+
+				@media screen and (max-width: 600px) {
 					
 					#nav  {
 					  position: relative;
@@ -3344,8 +3447,6 @@ input, select, textarea {
 					  transform: none;
 					}
 				}
-
-		
 
 		}
 
@@ -3682,7 +3783,7 @@ input, select, textarea {
 			}
 
 				#main > .main {
-					padding: 2.5em 1em 0.5em 1em ;
+					padding: 5em 1em 0.5em 1em ;
 				}
 
 					#main > .main > .image.main:first-child {
